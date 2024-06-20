@@ -12,17 +12,10 @@
   <component name="ChangeListManager">
     <list default="true" id="97e02bc7-8665-4fab-aa81-c1fd38763902" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CppAITutorial/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CppAITutorial/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Config/DefaultInput.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Config/DefaultInput.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/ThirdPerson/Blueprints/BP_ThirdPersonCharacter.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/ThirdPerson/Blueprints/BP_ThirdPersonCharacter.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/ThirdPerson/Input/IMC_Default.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/ThirdPerson/Input/IMC_Default.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/ThirdPerson/Maps/ThirdPersonMap/1/HF/YFYBQ72OYLHJQS0TSSXGBV.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/ThirdPerson/Maps/ThirdPersonMap/1/QS/VHQF8JWOATZI5V3ZVY5YTM.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/ThirdPerson/Maps/ThirdPersonMap/1/WU/NB37RT5Q32Z8MJWD8BD2SO.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/__ExternalActors__/ThirdPerson/Maps/ThirdPersonMap/1/WU/NB37RT5Q32Z8MJWD8BD2SO.uasset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/ThirdPerson/Maps/ThirdPersonMap/3/P3/O43ETCZTFMLWWH1CJ941H2.uasset" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Content/__ExternalActors__/ThirdPerson/Maps/ThirdPersonMap/D/DE/SWSI13675DVYIZ0N4NF7Y3.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/__ExternalActors__/ThirdPerson/Maps/ThirdPersonMap/D/DE/SWSI13675DVYIZ0N4NF7Y3.uasset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CppAITutorial.uproject" beforeDir="false" afterPath="$PROJECT_DIR$/CppAITutorial.uproject" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/CppAITutorial/CppAITutorialCharacter.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/CppAITutorial/CppAITutorialCharacter.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/CppAITutorial/CppAITutorialCharacter.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/CppAITutorial/CppAITutorialCharacter.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/CppAITutorial/CppAITutorial.Build.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Source/CppAITutorial/CppAITutorial.Build.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/CppAITutorial/NPC.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/CppAITutorial/NPC.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/CppAITutorial/NPC.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/CppAITutorial/NPC.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,6 +28,8 @@
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/Source/CppAITutorial/NPC.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/CppAITutorial/NPC.h" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Source/CppAITutorial/NPC_AIController.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Source/CppAITutorial/NPC_AIController.h" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProjectColorInfo"><![CDATA[{
   "customColor": "",
@@ -487,7 +482,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1718878285599</updated>
-      <workItem from="1718878289443" duration="3887000" />
+      <workItem from="1718878289443" duration="6686000" />
     </task>
     <servers />
   </component>
