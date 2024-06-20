@@ -12,10 +12,7 @@
   <component name="ChangeListManager">
     <list default="true" id="97e02bc7-8665-4fab-aa81-c1fd38763902" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CppAITutorial/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CppAITutorial/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CppAITutorial.uproject" beforeDir="false" afterPath="$PROJECT_DIR$/CppAITutorial.uproject" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/CppAITutorial/CppAITutorial.Build.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Source/CppAITutorial/CppAITutorial.Build.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/CppAITutorial/NPC.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/CppAITutorial/NPC.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/CppAITutorial/NPC.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/CppAITutorial/NPC.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/AI/BB_NPC.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/AI/BB_NPC.uasset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -482,7 +479,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1718878285599</updated>
-      <workItem from="1718878289443" duration="6686000" />
+      <workItem from="1718878289443" duration="8054000" />
     </task>
     <servers />
   </component>
