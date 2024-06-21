@@ -57,10 +57,10 @@ void ANPC_AIController::SetupPerceptionSystem()
 	}
 #pragma endregion
 
-	UAIPerceptionComponent* PerceptionComponent{
+	UAIPerceptionComponent* PerceptionComp{
 		CreateDefaultSubobject<UAIPerceptionComponent>(TEXT("Perception Component"))
 	};
-	SetPerceptionComponent(*PerceptionComponent);
+	SetPerceptionComponent(*PerceptionComp);
 
 	SightConfig->SightRadius = 500.f;
 	SightConfig->LoseSightRadius = SightConfig->SightRadius + 25.f;
@@ -78,7 +78,7 @@ void ANPC_AIController::SetupPerceptionSystem()
 
 void ANPC_AIController::OnTargetDetected(AActor* Actor, FAIStimulus const Stimulus)
 {
-	ACppAITutorialCharacter* const Player{Cast<ACppAITutorialCharacter>(Actor)};
+	const ACppAITutorialCharacter* const Player{Cast<ACppAITutorialCharacter>(Actor)};
 
 #pragma region NullChecks
 	if (!Player)
