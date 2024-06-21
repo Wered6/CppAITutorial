@@ -4,7 +4,10 @@
 
 #include "CoreMinimal.h"
 #include "AIController.h"
+#include "Perception/AIPerceptionTypes.h"
 #include "NPC_AIController.generated.h"
+
+class UAISenseConfig_Sight;
 
 UCLASS()
 class CPPAITUTORIAL_API ANPC_AIController : public AAIController
@@ -16,4 +19,15 @@ public:
 
 protected:
 	virtual void OnPossess(APawn* InPawn) override;
+
+#pragma region Perception
+
+private:
+	void SetupPerceptionSystem();
+	UFUNCTION()
+	void OnTargetDetected(AActor* Actor, FAIStimulus const Stimulus);
+
+	TObjectPtr<UAISenseConfig_Sight> SightConfig;
+
+#pragma endregion
 };

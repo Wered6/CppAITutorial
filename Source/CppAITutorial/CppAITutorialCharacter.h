@@ -7,6 +7,7 @@
 #include "Logging/LogMacros.h"
 #include "CppAITutorialCharacter.generated.h"
 
+class UAIPerceptionStimuliSourceComponent;
 class USpringArmComponent;
 class UCameraComponent;
 class UInputMappingContext;
@@ -84,4 +85,12 @@ private:
 
 
 #pragma endregion
+
+#pragma region Perception
+
+	void SetupStimulusSource();
+	
+	TObjectPtr<UAIPerceptionStimuliSourceComponent> StimulusSource;
+
+#pragma endregion 
 };

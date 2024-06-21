@@ -10,6 +10,8 @@
 #include "EnhancedInputComponent.h"
 #include "EnhancedInputSubsystems.h"
 #include "InputActionValue.h"
+#include "Perception/AIPerceptionStimuliSourceComponent.h"
+#include "Perception/AISense_Sight.h"
 
 DEFINE_LOG_CATEGORY(LogTemplateCharacter);
 
@@ -50,6 +52,8 @@ ACppAITutorialCharacter::ACppAITutorialCharacter()
 	// Attach the camera to the end of the boom and let the boom adjust to match the controller orientation
 	FollowCamera->bUsePawnControlRotation = false; // Camera does not rotate relative to arm
 
+
+	SetupStimulusSource();
 	// Note: The skeletal mesh and anim blueprint references on the Mesh component (inherited from Character) 
 	// are set in the derived blueprint asset named ThirdPersonCharacter (to avoid direct content references in C++)
 }
@@ -138,7 +142,24 @@ void ACppAITutorialCharacter::Look(const FInputActionValue& Value)
 	}
 }
 
+// ReSharper disable once CppMemberFunctionMayBeConst
 void ACppAITutorialCharacter::Exit()
 {
 	GetWorld()->GetFirstPlayerController()->ConsoleCommand("quit");
+}
+
+void ACppAITutorialCharacter::SetupStimulusSource()
+{
+	StimulusSource = CreateDefaultSubobject<UAIPerceptionStimuliSourceComponent>(TEXT("Stimulus"));
+
+#pragma region NullChecks
+	if (!StimulusSource)
+	{
+		UE_LOG(LogTemp, Warning, TEXT("ACppAITutorialCharacter::SetupStimulusSource|StimulusSource is nullptr"))
+		return;
+	}
+#pragma endregion
+
+	StimulusSource->RegisterForSense(TSubclassOf<UAISense_Sight>());
+	StimulusSource->RegisterWithPerceptionSystem();
 }
