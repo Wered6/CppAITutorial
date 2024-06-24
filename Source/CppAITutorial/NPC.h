@@ -6,6 +6,7 @@
 #include "GameFramework/Character.h"
 #include "NPC.generated.h"
 
+class APatrolPath;
 class UBehaviorTree;
 
 UCLASS()
@@ -35,9 +36,12 @@ public:
 public:
 	UBehaviorTree* GetBehaviorTree() const;
 
-protected:
+private:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="AI", meta=(AllowPrivateAccess="true"))
-	UBehaviorTree* Tree;
+	TObjectPtr<UBehaviorTree> Tree;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="AI", meta=(AllowPrivateAccess="true"))
+	TObjectPtr<APatrolPath> PatrolPath;
 
 #pragma endregion
 };
