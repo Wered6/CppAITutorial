@@ -36,6 +36,8 @@ public:
 public:
 	UBehaviorTree* GetBehaviorTree() const;
 
+	APatrolPath* GetPatrolPath() const;
+
 private:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="AI", meta=(AllowPrivateAccess="true"))
 	TObjectPtr<UBehaviorTree> Tree;
