@@ -34,3 +34,23 @@ APatrolPath* ANPC::GetPatrolPath() const
 {
 	return PatrolPath;
 }
+
+UAnimMontage* ANPC::GetMontage() const
+{
+	return Montage;
+}
+
+int ANPC::MeleeAttack_Implementation()
+{
+#pragma region NullChecks
+	if (!Montage)
+	{
+		UE_LOG(LogTemp, Warning, TEXT("ANPC::MeleeAttack_Implementation|Montage is nullptr"))
+		return 0;
+	}
+#pragma endregion
+
+	PlayAnimMontage(Montage);
+
+	return 0;
+}

@@ -60,7 +60,10 @@ protected:
 	void Look(const FInputActionValue& Value);
 
 private:
-	/** Called for exit input*/
+	/** Called for attack input */
+	void Attack();
+	
+	/** Called for exit input */
 	void Exit();
 
 	/** MappingContext */
@@ -98,9 +101,11 @@ private:
 
 #pragma endregion
 
+#pragma region Animation
+	
 private:
-	void Attack();
-
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Animation", meta=(AllowPrivateAccess="true"))
 	TObjectPtr<UAnimMontage> Montage;
+
+#pragma endregion 
 };

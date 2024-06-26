@@ -3,6 +3,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "CombatInterface.h"
 #include "GameFramework/Character.h"
 #include "NPC.generated.h"
 
@@ -10,7 +11,7 @@ class APatrolPath;
 class UBehaviorTree;
 
 UCLASS()
-class CPPAITUTORIAL_API ANPC : public ACharacter
+class CPPAITUTORIAL_API ANPC : public ACharacter, public ICombatInterface
 {
 	GENERATED_BODY()
 
@@ -44,6 +45,24 @@ private:
 
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="AI", meta=(AllowPrivateAccess="true"))
 	TObjectPtr<APatrolPath> PatrolPath;
+
+#pragma endregion
+
+#pragma region Animation
+
+public:
+	UAnimMontage* GetMontage() const;
+
+private:
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Animation", meta=(AllowPrivateAccess="true"))
+	TObjectPtr<UAnimMontage> Montage;
+
+#pragma endregion
+
+#pragma region Combat
+
+public:
+	virtual int MeleeAttack_Implementation() override;
 
 #pragma endregion
 };
