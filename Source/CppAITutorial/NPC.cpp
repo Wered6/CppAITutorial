@@ -42,10 +42,10 @@ UAnimMontage* ANPC::GetMontage() const
 
 int ANPC::MeleeAttack_Implementation()
 {
-#pragma region NullChecks
+#pragma region Nullchecks
 	if (!Montage)
 	{
-		UE_LOG(LogTemp, Warning, TEXT("ANPC::MeleeAttack_Implementation|Montage is nullptr"))
+		UE_LOG(LogTemp, Warning, TEXT("%s|Montage is nullptr"), *FString(__FUNCTION__))
 		return 0;
 	}
 #pragma endregion

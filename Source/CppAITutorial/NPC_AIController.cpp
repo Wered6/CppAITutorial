@@ -2,7 +2,6 @@
 
 
 #include "NPC_AIController.h"
-
 #include "CppAITutorialCharacter.h"
 #include "NPC.h"
 #include "BehaviorTree/BehaviorTree.h"
