@@ -17,5 +17,5 @@ public:
 
 private:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="AI", meta=(AllowPrivateAccess="true"))
-	float MeleeRange{2.5f};
+	float MeleeRange{80.f};
 };
