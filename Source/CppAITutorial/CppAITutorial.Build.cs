@@ -17,7 +17,10 @@ public class CppAITutorial : ModuleRules
 			"EnhancedInput",
 			"AIModule",
 			"GameplayTasks",
-			"NavigationSystem"
+			"NavigationSystem",
+			"UMG",
+			"Slate",
+			"SlateCore"
 		});
 	}
 }

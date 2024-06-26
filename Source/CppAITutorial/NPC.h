@@ -4,14 +4,14 @@
 
 #include "CoreMinimal.h"
 #include "CombatInterface.h"
-#include "GameFramework/Character.h"
+#include "CppAICharacterBase.h"
 #include "NPC.generated.h"
 
 class APatrolPath;
 class UBehaviorTree;
 
 UCLASS()
-class CPPAITUTORIAL_API ANPC : public ACharacter, public ICombatInterface
+class CPPAITUTORIAL_API ANPC : public ACppAICharacterBase, public ICombatInterface
 {
 	GENERATED_BODY()
 
