@@ -79,6 +79,10 @@ private:
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess = "true"))
 	UInputAction* LookAction;
 
+	/** Attack Input Action */
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess = "true"))
+	UInputAction* AttackAction;
+
 	/** ExitGame Input Action */
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = Input, meta = (AllowPrivateAccess = "true"))
 	UInputAction* ExitAction;
@@ -89,8 +93,14 @@ private:
 #pragma region Perception
 
 	void SetupStimulusSource();
-	
+
 	TObjectPtr<UAIPerceptionStimuliSourceComponent> StimulusSource;
 
-#pragma endregion 
+#pragma endregion
+
+private:
+	void Attack();
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category="Animation", meta=(AllowPrivateAccess="true"))
+	TObjectPtr<UAnimMontage> Montage;
 };

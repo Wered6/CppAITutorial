@@ -94,8 +94,12 @@ void ACppAITutorialCharacter::SetupPlayerInputComponent(UInputComponent* PlayerI
 		// Looking
 		EnhancedInputComponent->BindAction(LookAction, ETriggerEvent::Triggered, this, &ACppAITutorialCharacter::Look);
 
+		// Attacking
+		EnhancedInputComponent->BindAction(AttackAction, ETriggerEvent::Started, this,
+		                                   &ACppAITutorialCharacter::Attack);
+
 		// ExitGame
-		EnhancedInputComponent->BindAction(ExitAction, ETriggerEvent::Completed, this, &ACppAITutorialCharacter::Exit);
+		EnhancedInputComponent->BindAction(ExitAction, ETriggerEvent::Started, this, &ACppAITutorialCharacter::Exit);
 	}
 	else
 	{
@@ -162,4 +166,17 @@ void ACppAITutorialCharacter::SetupStimulusSource()
 
 	StimulusSource->RegisterForSense(TSubclassOf<UAISense_Sight>());
 	StimulusSource->RegisterWithPerceptionSystem();
+}
+
+void ACppAITutorialCharacter::Attack()
+{
+#pragma region NullChecks
+	if (!Montage)
+	{
+		UE_LOG(LogTemp, Warning, TEXT("ACppAITutorialCharacter::Attack|Montage is nullptr"))
+		return;
+	}
+#pragma endregion
+
+	PlayAnimMontage(Montage);
 }
