@@ -48,6 +48,15 @@ private:
 
 #pragma endregion
 
+#pragma region Combat
+
+public:
+	void AttackStart() const;
+	void AttackEnd() const;
+
+private:
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category="Collision", meta=(AllowPrivateAccess="true"))
 	TObjectPtr<UBoxComponent> RightFistCollisionBox;
+
+#pragma endregion
 };

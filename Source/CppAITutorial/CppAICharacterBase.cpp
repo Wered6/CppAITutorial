@@ -90,3 +90,31 @@ void ACppAICharacterBase::SetHealth(float const NewHealth)
 {
 	Health = NewHealth;
 }
+
+void ACppAICharacterBase::AttackStart() const
+{
+#pragma region Nullchecks
+	if (!RightFistCollisionBox)
+	{
+		UE_LOG(LogTemp, Warning, TEXT("%s|RightFistCollisionBox is nullptr"), *FString(__FUNCTION__))
+		return;
+	}
+#pragma endregion
+
+	RightFistCollisionBox->SetCollisionProfileName("Fist");
+	RightFistCollisionBox->SetNotifyRigidBodyCollision(true);
+}
+
+void ACppAICharacterBase::AttackEnd() const
+{
+#pragma region Nullchecks
+	if (!RightFistCollisionBox)
+	{
+		UE_LOG(LogTemp, Warning, TEXT("%s|RightFistCollisionBox is nullptr"), *FString(__FUNCTION__))
+		return;
+	}
+#pragma endregion
+
+	RightFistCollisionBox->SetCollisionProfileName("Fist");
+	RightFistCollisionBox->SetNotifyRigidBodyCollision(false);
+}
