@@ -55,7 +55,24 @@ public:
 	void AttackEnd() const;
 
 private:
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category="Collision", meta=(AllowPrivateAccess="true"))
+	UFUNCTION()
+	void OnAttackOverlapBegin(
+		UPrimitiveComponent* const OverlappedComponent,
+		AActor* const OtherActor,
+		UPrimitiveComponent* const OtherComponent,
+		int const OtherBodyIndex,
+		bool const FromSweep,
+		FHitResult const& SweepResult);
+
+	UFUNCTION()
+	void OnAttackOverlapEnd(
+		UPrimitiveComponent* const OverlappedComponent,
+		AActor* const OtherActor,
+		UPrimitiveComponent* OtherComponent,
+		int const OtherBodyIndex);
+
+	UPROPERTY
+	(VisibleAnywhere, BlueprintReadOnly, Category="Collision", meta=(AllowPrivateAccess="true"))
 	TObjectPtr<UBoxComponent> RightFistCollisionBox;
 
 #pragma endregion

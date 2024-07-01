@@ -3,7 +3,9 @@
 
 #include "CppAICharacterBase.h"
 #include "Const.h"
+#include "CppAITutorialCharacter.h"
 #include "HealthBarWidget.h"
+#include "NPC.h"
 #include "Components/BoxComponent.h"
 #include "Components/WidgetComponent.h"
 
@@ -42,6 +44,9 @@ ACppAICharacterBase::ACppAICharacterBase() :
 void ACppAICharacterBase::BeginPlay()
 {
 	Super::BeginPlay();
+
+	RightFistCollisionBox->OnComponentBeginOverlap.AddDynamic(this, &ACppAICharacterBase::OnAttackOverlapBegin);
+	RightFistCollisionBox->OnComponentEndOverlap.AddDynamic(this, &ACppAICharacterBase::OnAttackOverlapEnd);
 }
 
 // Called every frame
@@ -89,6 +94,19 @@ float ACppAICharacterBase::GetMaxHealth() const
 void ACppAICharacterBase::SetHealth(float const NewHealth)
 {
 	Health = NewHealth;
+
+	if (Health <= 0)
+	{
+		if (Cast<ACppAITutorialCharacter>(this))
+		{
+			UE_LOG(LogTemp, Error, TEXT("You Lose!!!!"))
+		}
+		else if (Cast<ANPC>(this))
+		{
+			UE_LOG(LogTemp, Error, TEXT("You Win!!!!"))
+		}
+		GetWorld()->GetFirstPlayerController()->ConsoleCommand("quit");
+	}
 }
 
 void ACppAICharacterBase::AttackStart() const
@@ -117,4 +135,37 @@ void ACppAICharacterBase::AttackEnd() const
 
 	RightFistCollisionBox->SetCollisionProfileName("Fist");
 	RightFistCollisionBox->SetNotifyRigidBodyCollision(false);
+}
+
+void ACppAICharacterBase::OnAttackOverlapBegin(UPrimitiveComponent* const OverlappedComponent,
+                                               AActor* const OtherActor,
+                                               UPrimitiveComponent* const OtherComponent,
+                                               int const OtherBodyIndex,
+                                               bool const FromSweep,
+                                               FHitResult const& SweepResult)
+{
+	if (OtherActor == this)
+	{
+		return;
+	}
+
+	ANPC* Enemy{Cast<ANPC>(OtherActor)};
+	ACppAITutorialCharacter* Player{Cast<ACppAITutorialCharacter>(OtherActor)};
+	if (Enemy)
+	{
+		float const NewHealth{Enemy->GetHealth() - Enemy->GetMaxHealth() * 0.1f};
+		Enemy->SetHealth(NewHealth);
+	}
+	else if (Player)
+	{
+		float const NewHealth{Player->GetHealth() - Player->GetMaxHealth() * 0.07f};
+		Player->SetHealth(NewHealth);
+	}
+}
+
+void ACppAICharacterBase::OnAttackOverlapEnd(UPrimitiveComponent* const OverlappedComponent,
+                                             AActor* const OtherActor,
+                                             UPrimitiveComponent* OtherComponent,
+                                             int const OtherBodyIndex)
+{
 }
