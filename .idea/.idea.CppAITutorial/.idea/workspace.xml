@@ -11,12 +11,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="97e02bc7-8665-4fab-aa81-c1fd38763902" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.CppAITutorial/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CppAITutorial/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.CppAITutorial/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.CppAITutorial/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CppAITutorial.uproject" beforeDir="false" afterPath="$PROJECT_DIR$/CppAITutorial.uproject" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/CppAITutorial/CppAITutorial.Build.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Source/CppAITutorial/CppAITutorial.Build.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/CppAITutorial/CppAITutorialCharacter.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/CppAITutorial/CppAITutorialCharacter.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/CppAITutorial/NPC.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/CppAITutorial/NPC.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Characters/Mannequins/Meshes/SKM_Manny_Simple.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Characters/Mannequins/Meshes/SKM_Manny_Simple.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Characters/Mannequins/Meshes/SK_Mannequin.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Characters/Mannequins/Meshes/SK_Mannequin.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/CppAITutorial/Const.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/CppAITutorial/Const.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/CppAITutorial/CppAICharacterBase.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/CppAITutorial/CppAICharacterBase.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/CppAITutorial/CppAICharacterBase.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/CppAITutorial/CppAICharacterBase.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,6 +27,21 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/CppAITutorial/BTTask_ChasePlayer.cpp" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/CppAITutorial/BTTask_ChasePlayer.h" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Source/CppAITutorial/BTTask_FindPlayerLocation.cpp" root0="FORCE_HIGHLIGHTING" />
@@ -495,7 +510,7 @@
       <workItem from="1718878289443" duration="10356000" />
       <workItem from="1718973331402" duration="23549000" />
       <workItem from="1719319631269" duration="24114000" />
-      <workItem from="1719418133879" duration="2449000" />
+      <workItem from="1719418133879" duration="9964000" />
     </task>
     <servers />
   </component>

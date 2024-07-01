@@ -6,6 +6,7 @@
 #include "GameFramework/Character.h"
 #include "CppAICharacterBase.generated.h"
 
+class UBoxComponent;
 class UWidgetComponent;
 
 UCLASS()
@@ -21,12 +22,12 @@ protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
-public:	
+public:
 	// Called every frame
 	virtual void Tick(float DeltaTime) override;
 
 #pragma region Input
-	
+
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
@@ -44,6 +45,9 @@ private:
 	TObjectPtr<UWidgetComponent> WidgetComponent;
 	float const MaxHealth{100.f};
 	float Health;
-	
-#pragma endregion 
+
+#pragma endregion
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category="Collision", meta=(AllowPrivateAccess="true"))
+	TObjectPtr<UBoxComponent> RightFistCollisionBox;
 };
